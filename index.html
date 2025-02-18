@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chess JS</title>
 
-        <!-- Meta tags -->
-        <meta name="title" property="og:title" content="Chess JS"/>
-        <meta name="description" property="og:description" content="Code for my Chess AI Project"/>
-        <meta name="image" property="og:image" content=""/>
-        <meta name="url" property="og:url" content=""/>
-        <meta name="google-site-verification" content="" />    
+<head>
+    <title>Chess JS</title>
 
-        <!-- custom css -->
-        <link rel="stylesheet" href="style.css">
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="Chess JS"/>
+    <meta name="description" property="og:description" content="Code for my Chess AI Project"/>
+    <meta name="image" property="og:image" content=""/>
+    <meta name="url" property="og:url" content=""/>
+    <meta name="google-site-verification" content="" />    
+    
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
 
-        <!-- custom js -->
-        <script src="script.js"></script>
-    </head>
+    <!-- custom js -->
+    <script src="script.js"></script>
+</head>
 
-    <body>
-        <h1>Chess JS</h1>
+<body>
+    <div class="container">
+        <h1 id="header" class="header">Chess JS</h1>
         <div id="chessboard" class="chessboard"></div>
-        <button id="startButton" class="btn">New Game</button>
-        <button id="resetButton" class="btn">Resign</button>
-    </body>
+        <div id="button-container" class="button-container">
+            <button id="startButton" class="btn">New Game</button>
+            <button id="flipButton" class="btn">Flip Board</button>
+            <button id="undoButton" class="btn">Undo</button>
+            <button id="resetButton" class="btn">Resign</button>
+        </div>
+    </div>
+</body>
+
 </html>
