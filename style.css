@@ -85,3 +85,24 @@ body {
     background-color: var(--button-color);
     transform: translateY(-2px);
 }
+
+.piece {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.piece-n { background-image: url('img/pieces/bn.svg'); }
+.piece-r { background-image: url('img/pieces/br.svg'); }
+.piece-b { background-image: url('img/pieces/bb.svg'); }
+.piece-k { background-image: url('img/pieces/bk.svg'); }
+.piece-q { background-image: url('img/pieces/bq.svg'); }
+.piece-p { background-image: url('img/pieces/bp.svg'); }
+.piece-R { background-image: url('img/pieces/wr.svg'); }
+.piece-N { background-image: url('img/pieces/wn.svg'); }
+.piece-B { background-image: url('img/pieces/wb.svg'); }
+.piece-Q { background-image: url('img/pieces/wq.svg'); }
+.piece-K { background-image: url('img/pieces/wk.svg'); }
+.piece-P { background-image: url('img/pieces/wp.svg'); }
