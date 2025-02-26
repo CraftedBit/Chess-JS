@@ -2,6 +2,7 @@
     --white: #f0d9b5;
     --black: #b58863;
     --background-color:rgb(23, 21, 24);
+    --highlight-color:rgb(62, 53, 65);
     --button-color:rgb(188, 119, 209);
     --text-color: #fdfdfe;
     --font-text: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,6 +19,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+    width: 66.67vw; /* 2/3rds of the screen width */
+    margin: 0 auto;
+}
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.move-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 10px;
+    background-color:rgb(40, 34, 41);
+    color: var(--text-color);
+    border-radius: 10px;
+    height: 90%;
+    width: 300px;
+}
+
 .header {
     font-family: var(--font-text);
     font-padding: var(--font-padding);
@@ -31,6 +60,39 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.move-list {
+    margin-top: 10px;
+    height: 80%;
+    background-color: var(--highlight-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button-container {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: var(--background-color);
+    border: none;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: var(--button-color);
+    transform: translateY(-2px);
 }
 
 .chessboard {
@@ -63,27 +125,6 @@ body {
     margin: 10px auto;
     padding: 0 10px;
     gap: 10px; 
-}
-
-.btn {
-    background-color: var(--background-color);
-    border: none;
-    color: var(--text-color);
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    flex: 1;
-    height: 40px;
-    justify-content: center;
-    font-family: var(--font-text);
-}
-
-.btn:hover {
-    background-color: var(--button-color);
-    transform: translateY(-2px);
 }
 
 .piece {

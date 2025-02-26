@@ -17,19 +17,30 @@
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <!-- custom js -->
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1 id="header" class="header">Chess JS</h1>
-        <div id="chessboard" class="chessboard"></div>
-        <div id="button-container" class="button-container">
-            <button id="startButton" class="btn">New Game</button>
-            <button id="flipButton" class="btn">Flip Board</button>
-            <button id="undoButton" class="btn">Undo</button>
-            <button id="resetButton" class="btn">Resign</button>
+    <div id="screen-container" class="screen-container">
+        <div id="board-container" class="board-container">
+            <h1 id="header" class="header">Chess JS</h1>
+            <div id="chessboard" class="chessboard"></div>
+        </div>
+        <div id="move-container" class="move-container">
+            <h1 id="move-header" class="header">Moves History</h1>
+            <div id="move-list" class="move-list">
+            <div id="button-container" class="button-container"> </div>
+                <button id="startButton" class="btn"><i class="fa-solid fa-plus"></i></button>
+                <button id="undoButton" class="btn"><i class="fa fa-backward"></i></button>
+                <button id="redoButton" class="btn"><i class="fa-solid fa-forward"></i></button>
+                <button id="resetButton" class="btn"><i class="fa-solid fa-flag"></i></button>
+                <button id="flipButton" class="btn"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button id="shareButtpn" class="btn"><i class="fa-solid fa-share-nodes"></i></button>
+            </div>
         </div>
     </div>
 </body>
