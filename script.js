@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const chessboard = document.getElementById('chessboard');
 
     function createChessboard() {
-        for (let i = 0; i < 8; i++) {
-            for (let j = 0; j < 8; j++) {
+        for (let file = 0; file < 8; file++) {
+            for (let rank = 0; rank < 8; rank++) {
                 const square = document.createElement('div');
                 square.classList.add('square');
 
-                if ((i + j) % 2 === 0) {
+                if ((file + rank) % 2 === 0) {
                     square.classList.add('white-square');
                 } else {
                     square.classList.add('black-square');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateChessboard(fen) {
         const squares = chessboard.getElementsByClassName('square');
-        const rows = fen.split('/');
+        const rows = fen.split(' ')[0].split('/')
         let squareIndex = 0;
 
         for (let i = 0; i < rows.length; i++) {
@@ -93,10 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     createChessboard()
-    const initialFEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR';
+    const initialFEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
     updateChessboard(initialFEN);
     currentFen();
 
     document.getElementById("shareButton").addEventListener("click", copyFen);
 });
-
