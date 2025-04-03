@@ -13,7 +13,6 @@
     <meta name="url" property="og:url" content=""/>
     <meta name="google-site-verification" content="" />    
     
-    
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
 
@@ -29,17 +28,20 @@
         <div id="board-container" class="board-container">
             <h1 id="header" class="header">Chess JS</h1>
             <div id="chessboard" class="chessboard"></div>
+            <div id="fen-container" class="fen-container">
+                <div id="fen" class="fen"></div>
+            </div>
         </div>
         <div id="move-container" class="move-container">
             <h1 id="move-header" class="header">Moves History</h1>
-            <div id="move-list" class="move-list">
-            <div id="button-container" class="button-container"> </div>
-                <button id="startButton" class="btn"><i class="fa-solid fa-plus"></i></button>
-                <button id="undoButton" class="btn"><i class="fa fa-backward"></i></button>
-                <button id="redoButton" class="btn"><i class="fa-solid fa-forward"></i></button>
-                <button id="resetButton" class="btn"><i class="fa-solid fa-flag"></i></button>
-                <button id="flipButton" class="btn"><i class="fa-solid fa-arrows-rotate"></i></button>
-                <button id="shareButtpn" class="btn"><i class="fa-solid fa-share-nodes"></i></button>
+            <div id="move-list" class="move-list"></div>
+            <div id="button-container" class="button-container">
+                <button id="startButton" class="btn" title="New Game"><i class="fa-solid fa-plus"></i></button>
+                <button id="undoButton" class="btn" title="Move Back"><i class="fa fa-backward"></i></button>
+                <button id="redoButton" class="btn" title="Move Forward"><i class="fa-solid fa-forward"></i></button>
+                <button id="resignButton" class="btn" title="Resign"><i class="fa-solid fa-flag"></i></button>
+                <button id="flipButton" class="btn" title="Flip Board"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button id="shareButton" class="btn" title="Copy FEN to Clipboard"><i class="fa-solid fa-share-nodes"></i></button>
             </div>
         </div>
     </div>
