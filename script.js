@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 chessboard.appendChild(square);
             }
         }
-        console.log("Chessboard created");
+        //console.log("Chessboard created");
     }
 
     function updateChessboardFromFen(fen) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-        console.log("Chessboard updated with FEN: " + fen);
+        //console.log("Chessboard updated with FEN: " + fen);
     }
 
     function generateCurrentFen() {
