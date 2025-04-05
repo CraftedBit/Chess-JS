@@ -167,6 +167,7 @@ body {
   padding: 0.5rem;
   line-height: 1.5rem;
   word-wrap: break-word;
+  min-height: 4rem;
 }
 
 .move-container {
