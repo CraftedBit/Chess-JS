@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fenDisplay.textContent = fen;
         }
         //document.getElementById("fen").innerHTML = currentFen;
-        console.log("Current FEN: " + fen);
+        // console.log("Current FEN: " + fen);
         return fen;
     }
 
