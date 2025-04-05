@@ -83,10 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // TODO: Turn / castling / en passant / halfmove / fullmove
-        // For now, we will just add a placeholder for these values
-        fen += ' w KQkq - 0 1'; // Placeholder values
+        // Generate the FEN segments for turn, castling, en passant, halfmove, fullmove
+        const turn = 'w'; // Placeholder: Replace with actual turn tracking
+        const castling = 'KQkq'; // Placeholder: Replace with actual castling rights tracking
+        const enPassant = '-'; // Placeholder: Replace with actual en passant target square tracking
+        const halfmove = '0'; // Placeholder: Replace with actual halfmove clock tracking
+        const fullmove = '1'; // Placeholder: Replace with actual fullmove number tracking
 
+        fen += ` ${turn} ${castling} ${enPassant} ${halfmove} ${fullmove}`;
         if (fenDisplay) {
             fenDisplay.textContent = fen;
         }
