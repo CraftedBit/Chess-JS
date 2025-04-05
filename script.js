@@ -4,12 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const chessboard = document.getElementById('chessboard');
     const fenDisplay = document.getElementById('fen');
     const shareButton = document.getElementById('shareButton');
+    const height = 8;
+    const width = 8;
 
     // Create the chessboard squares
     function createChessboard() {
         chessboard.innerHTML = ''; // Clear existing squares
-        for (let rank = 0; rank < 8; rank++) { // Ranks (rows) are 0-7
-            for (let file = 0; file < 8; file++) { // Files (columns) are a-h (0-7)
+        for (let rank = 0; rank < height; rank++) { // Ranks (rows) are 0-7
+            for (let file = 0; file < width; file++) { // Files (columns) are a-h (0-7)
                 const square = document.createElement('div');
                 square.classList.add('square');
                 
@@ -33,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
-
             for (let j = 0; j < row.length; j++) {
                 const piece = row[j];
                 if (!isNaN(piece)) {
@@ -57,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateCurrentFen() {
         let fen = '';
     
-        for (let rank = 0; rank < 8; rank++) {
+        for (let rank = 0; rank < height; rank++) {
             let emptySpaces = 0;
-            for (let file = 0; file < 8; file++) {
+            for (let file = 0; file < width; file++) {
                 const square = document.getElementsByClassName('square')[rank * 8 + file];
                 const piece = square.getElementsByClassName('piece')[0];
     
@@ -101,12 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function copyFen() {
         const fen = document.getElementById("fen").innerHTML;
-        const textArea = document.createElement("textarea");
-        textArea.value = fen;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("Copy");
-        textArea.remove();
+        navigator.clipboard.writeText(fen)
         alert("FEN copied: " + fen);
     }
 
