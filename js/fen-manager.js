@@ -26,7 +26,7 @@ export class FenManager {
             }
 
             // Update gamestate with active color, castling rights, etc.
-            this.gamestate = {
+            this.gameState = {
                 turn: turn || 'w',
                 castling: castling || 'KQkq',
                 enPassant: enPassant || '-',
