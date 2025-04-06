@@ -28,7 +28,7 @@ export class UIManager {
             this.showNotifcation("FEN copied to clipboard: " + fen);
         } catch (error) {
             console.error("Error copying FEN to clipboard:", error);
-            this.showNotification('Failed to copy FEN to clipboard');
+            showNotification('Failed to copy FEN to clipboard');
         }
     }
 
