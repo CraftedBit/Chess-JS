@@ -100,6 +100,16 @@ body {
   filter: brightness(1.1);
 }
 
+.square.highlight {
+  background-color: var(--button-hover);
+  filter: brightness(1.2);
+}
+
+.square.highlight-legal {
+  background-color: var(--button-hover);
+  filter: brightness(1.2);
+}
+
 .black-square {
   background-color: var(--black);
 }
@@ -192,6 +202,7 @@ body {
 }
 
 #move-header {
+  text-align: left;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
@@ -260,6 +271,22 @@ body {
 
 .btn:active {
   transform: translateY(0);
+}
+
+.notification {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: calc(var(--border-radius) / 2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.notification.visible {
+  opacity: 1;
 }
 
 /* Media queries for responsiveness */
