@@ -36,8 +36,7 @@ export class Chessboard {
         }
         
         // Clear any existing piece in the square before placing a new one
-        square.querySelector('piece')?.remove();
-
+        square.querySelector('.piece')?.remove();
         const pieceElement = document.createElement('div');
         pieceElement.classList.add('piece', `piece-${piece}`);
         square.appendChild(pieceElement);
