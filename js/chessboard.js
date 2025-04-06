@@ -53,4 +53,15 @@ export class Chessboard {
     getSquare (rank, file) {
         return this.element.querySelector(`.square[data-rank="${rank}"][data-file="${file}"]`);
     }
+
+    highlightSquare(rank, file) {
+        const square = this.getSquare(rank, file);
+        if (square) {
+            square.classList.add('highlight');
+        }
+    }
+
+    clearHighlights() {
+        this.element.querySelectorAll('.highlight').forEach(square => square.classList.remove('highlight'));
+    }
 }

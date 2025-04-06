@@ -33,30 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.addEventListener("click", (event) => {
-    /* This placeholder event listener is for click events on the chessboard squares. 
-       It logs the rank and file of the square being clicked.
-    const target = event.target.closest(".square");
-    if (target) {
-        const rank = target.dataset.rank;
-        const file = target.dataset.file;
-        console.log(`Square clicked: Rank ${rank}, File ${file}`);
-    } else {
-        console.log("Clicked outside a square.");
+document.addEventListener("mouseover", (event) => { 
+    const piece = event.target.closest('.piece');
+    if (piece) {
+        const square = piece.closest('.square');
+        const rank = square.dataset.rank;
+        const file = square.dataset.file;
+        chessApp.chessboard.highlightSquare(rank, file);
+        // Get legal moves for piece and highlight them
     }
-    */
 });
 
-document.addEventListener("mouseover", (event) => {
-    /* This placeholder event listener is for mouseover events on the chessboard squares. 
-       It logs the rank and file of the square being hovered over. 
-    const target = event.target.closest(".square");
-    if (target) {
-        const rank = target.dataset.rank;
-        const file = target.dataset.file;
-        console.log(`Square hovered: Rank ${rank}, File ${file}`);
-    } else {
-        console.log("Hovered outside a square.");
+document.addEventListener("mouseout", (event) => { 
+    const piece = event.target.closest('.piece');
+    if (piece) {
+        chessApp.chessboard.clearHighlights();
     }
-    */
+    console.log("Mouse out event triggered")
 });
+
+document.addEventListener("click", (event) => {
+    const piece = event.target.closest('.piece');
+    if (piece) {
+        const square = piece.closest('.square');
+        const rank = square.dataset.rank;
+        const file = square.dataset.file;
+        chessApp.chessboard.highlightSquare(rank, file);
+        // Get legal moves for piece and highlight them
+    } 
+})
